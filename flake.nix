@@ -9,7 +9,6 @@
 
     # Avoid nixpgks duplication
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
-    wrapper-modules.inputs.nixpkgs-lib.follows = "nixpkgs";
   };
 
   # Import modules/ automatically
