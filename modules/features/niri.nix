@@ -21,6 +21,26 @@
 
         layout.gaps = 5;
 
+	outputs = {
+		"DP-1" = {
+			position = _: {
+				props = {
+					x = 0;
+					y = 0;
+				};
+			};
+			focus-at-startup = {};
+		};
+		"HDMI-A-1" = {
+			position = _: {
+				props = {
+					x = 2560;
+					y = 0;
+				};
+			};
+		};
+	};
+
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = {};

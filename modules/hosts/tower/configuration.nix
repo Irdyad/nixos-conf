@@ -1,5 +1,5 @@
 {self, inputs, ...}: {
-  flake.nixosModules.towerConfig = {pkgs, lib, ...}: {
+  flake.nixosModules.towerConfig = {config, pkgs, lib, ...}: {
     imports = with self.nixosModules; [
       towerHardware
       niri
@@ -40,6 +40,14 @@
       git
 #      hyprpaper
       quickshell
+    ];
+
+    boot.extraModulePackages = [
+	    config.boot.kernelPackages.nct6687d
+    ];
+
+    boot.kernelModules = [
+	    "nct6687"
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
