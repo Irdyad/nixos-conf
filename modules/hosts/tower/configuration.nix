@@ -33,10 +33,10 @@
       vim
       wget
       foot
-      waybar
+#      waybar
       kitty
       git
-      hyprpaper
+#      hyprpaper
       quickshell
     ];
 
