@@ -15,6 +15,8 @@
 
     services.getty.autologinUser = "irdyad";
 
+    programs.coolercontrol.enable = true;
+
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
