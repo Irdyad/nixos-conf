@@ -7,7 +7,10 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules"; #allow to bundle programs
 
-    nvf.url = "github:notashelf/nvf";
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Avoid nixpgks duplication
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
