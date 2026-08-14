@@ -17,8 +17,15 @@
             config.vim = {
               enableLuaLoader = true;
 
-              viAlias = false;
-              vimAlias = false;
+              viAlias = true;
+              vimAlias = true;
+
+              # Let NVF handle the runtime packages directly
+              extraPackages = with pkgs; [
+                git
+                ripgrep
+                fd
+              ];
 
               options = {
                 number = true;
@@ -96,17 +103,7 @@
       };
     in
     {
-      packages.myNvim =
-        inputs.wrapper-modules.wrappers.nvim.wrap {
-          inherit pkgs;
-
-          package = nvf.neovim;
-
-          runtimePkgs = with pkgs; [
-            git
-            ripgrep
-            fd
-          ];
-        };
+      # Bypass wrapper-modules and export the NVF derivation directly
+      packages.myNvim = nvf.neovim;
     };
 }

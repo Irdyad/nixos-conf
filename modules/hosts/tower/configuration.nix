@@ -3,6 +3,7 @@
     imports = with self.nixosModules; [
       towerHardware
       niri
+      nvim
     ];
 
     boot.loader.systemd-boot.enable = true;
