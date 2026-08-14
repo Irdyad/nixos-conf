@@ -4,8 +4,9 @@
       towerHardware
       
       user-irdyad
+      system-core
 
-      desktop
+      desktop_base
       niri
       nvim
     ];
