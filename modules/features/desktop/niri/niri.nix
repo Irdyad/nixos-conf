@@ -46,6 +46,9 @@
         };
 
         binds = {
+          # --- Help / Keybinds ---
+          "Mod+F1".show-hotkey-overlay = {};
+
           # --- Core Applications ---
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+D".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
@@ -77,6 +80,29 @@
           "Mod+Shift+L".move-column-right = {};
           "Mod+Shift+K".move-window-up = {};
           "Mod+Shift+J".move-window-down = {};
+
+          # --- Resizing (Ergonomic Home-Row setup) ---
+          "Mod+R".switch-preset-column-width = {};
+          "Mod+U".set-column-width = "-10%";
+          "Mod+I".set-column-width = "+10%";
+          "Mod+Shift+U".set-window-height = "-10%";
+          "Mod+Shift+I".set-window-height = "+10%";
+
+          # --- Column Merging (Consume/Expel) ---
+          "Mod+C".consume-window-into-column = {};
+          "Mod+X".expel-window-from-column = {};
+
+          # --- Multi-Monitor Focus ---
+          "Mod+Comma".focus-monitor-left = {};
+          "Mod+Period".focus-monitor-right = {};
+
+          # --- Multi-Monitor Move (Window/Column) ---
+          "Mod+Shift+Comma".move-column-to-monitor-left = {};
+          "Mod+Shift+Period".move-column-to-monitor-right = {};
+
+          # --- Multi-Monitor Move (Workspace) ---
+          "Mod+Ctrl+Comma".move-workspace-to-monitor-left = {};
+          "Mod+Ctrl+Period".move-workspace-to-monitor-right = {};
 
           # --- Workspaces (Focus) ---
           "Mod+1".focus-workspace = 1;

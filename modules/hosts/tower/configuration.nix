@@ -7,8 +7,7 @@
       system-core
 
       desktop_base
-      niri
-      nvim
+      terminal_base
     ];
 
     #----------COOLING------------#

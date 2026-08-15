@@ -3,6 +3,7 @@
     imports = with self.nixosModules; [
       nvim
       bash
+      git
     ];
   };
 }
