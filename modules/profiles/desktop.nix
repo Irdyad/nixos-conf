@@ -2,6 +2,7 @@
 	flake.nixosModules.desktop_base = {config, pkgs, lib, ...}: {
 		imports = with self.nixosModules; [
 			niri
+      fonts-config
 		];
     programs.firefox.enable = true;
 	};
