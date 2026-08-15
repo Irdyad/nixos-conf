@@ -8,11 +8,12 @@
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-color-emoji
-        ubuntu_font_family
+        ubuntu-classic
 
         # Nerd Fonts for Neovim icons and terminal ligatures
         # (On NixOS unstable, nerd-fonts is its own attribute set)
         nerd-fonts.jetbrains-mono
+        nerd-fonts.symbols-only
         nerd-fonts.fira-code
         nerd-fonts.hack
       ];
