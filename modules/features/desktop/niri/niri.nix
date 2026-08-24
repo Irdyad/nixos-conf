@@ -56,8 +56,8 @@
           
           # --- Core Window Management ---
           "Mod+Q".close-window = {};
-          "Mod+F".fullscreen-window = {};
-          "Mod+Shift+F".maximize-column = {};
+          "Mod+F".maximize-column = {};
+          "Mod+Shift+F".fullscreen-window = {};
           
           # --- Focus (Vim-style or Arrows) ---
           "Mod+Left".focus-column-left = {};
