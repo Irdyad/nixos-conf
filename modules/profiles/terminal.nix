@@ -13,6 +13,8 @@
       nvim
       bash
       git
+    ];
+    environment.systemPackages = with pkgs; [
       psmisc
     ];
   };
