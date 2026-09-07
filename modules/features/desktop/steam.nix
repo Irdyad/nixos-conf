@@ -18,6 +18,21 @@
       remotePlay.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
 
+      # Package override to provide necessary runtime libs & arguments
+      package = pkgs.steam.override {
+        extraArgs = "-no-cef-sandbox";
+        extraLibraries = pkgs: with pkgs; [
+          # 32-bit / legacy font and X11 helpers
+          fontconfig
+          freetype
+          xorg.libXinerama
+          xorg.libXcursor
+          xorg.libXi
+          xorg.libXrandr
+          libpng
+          harfbuzz
+        ];
+
       # Enable Gamescope (useful for running stubborn games on Wayland/Niri)
       gamescopeSession.enable = true;
 
